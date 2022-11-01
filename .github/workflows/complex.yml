@@ -1,5 +1,6 @@
 name: Complex Workflow
-on: [push]
+on: 
+  push
 jobs:
   ubuntu:
     runs-on: ubuntu-latest
@@ -15,6 +16,6 @@ jobs:
     - run: date
   depends:
     needs:  [ubuntu,windows]
-   runs-on: macos-latest
+    runs-on: macos-latest
     steps:
     - run: date
